@@ -1,4 +1,5 @@
 var wordList;
+var myTimer;
 
 function loadWordList() {
 	var wordList;
@@ -128,3 +129,17 @@ function initialize() {
 		$('#newGameModal').modal('show');
 	}
 }
+
+function clock(time) {
+	clearInterval(myTimer);
+	myTimer = setInterval(myClock, 1000);
+	var c = time;
+
+	function myClock() {
+	  document.getElementById("timer").innerHTML = --c;
+	  if (c == 0) {
+		clearInterval(myTimer);
+		alert("Tempo acabou!");
+	  }
+	}
+  }

@@ -36,10 +36,21 @@
     <div class="container-fluid my-5">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-8 bg-info">
-            <p><h3>Decrypto</h3></p>
+          <div class="col-6 bg-info">
+            <p><h2>Decrypto</h2></p>
           </div>
-          <div class="col-4">
+          <div class="col-4 bg-info border">
+            <div class="row" style="margin-left: 2%; margin-top: 3%">
+                <h3>Timer:&nbsp;</h3>
+                <h3 id="timer">00:00:00</h3>
+            </div>
+            <div class="row" style="margin-left: 2%;">
+                <button onclick="clock(60);" class="btn btn-light btn-lg" style="width: 30%;">60seg</button>
+                <button onclick="clock(30);" class="btn btn-light btn-lg" style="margin-left: 1%; width: 30%;">30seg</button>
+                <button onclick="clearInterval(myTimer);" class="btn btn-light btn-lg" style="margin-left: 1%; width: 30%;">Stop</button>
+            </div>  
+          </div>
+          <div class="col-2">
             <button type="button" class="btn-lg btn-primary align-baseline float-right my-3" data-toggle="modal" data-target="#newGameModal">
               Novo Jogo
             </button>
